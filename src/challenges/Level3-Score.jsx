@@ -2,7 +2,6 @@
 import { useState } from 'react';
 
 export default function Level3() {
-  // TODO: 1. Create state for "homeScore" and "guestScore". Both start at 0.
   const [homeScore, setHomeScore] = useState(0);
   const [guestScore, setGuestScore] = useState(0);
 
