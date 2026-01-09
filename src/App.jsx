@@ -3,6 +3,7 @@ import Level1 from './challenges/Level1-Hero'
 import Level2 from './challenges/Level2-Spoiler'
 import Level3 from './challenges/Level3-Score'
 import Level4 from './challenges/Level4-Mirror'
+import Level5 from './challenges/Level5-Playlist'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Level2 />
       <Level3 />
       <Level4 />
+      <Level5 />
     </div>
   )
 }
