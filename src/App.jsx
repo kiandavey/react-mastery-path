@@ -6,6 +6,7 @@ import Level4 from './challenges/Level4-Mirror'
 import Level5 from './challenges/Level5-Playlist'
 import BossLevel1 from './challenges/BossLevel1'
 import Level6 from './challenges/Level6-Fetch'
+import Level7 from './challenges/Level7-Dependency'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Level5 />
       <BossLevel1 />
       <Level6 />
+      <Level7 />
     </div>
   )
 }
