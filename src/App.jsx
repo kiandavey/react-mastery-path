@@ -10,6 +10,7 @@ import Level6 from './challenges/Level6-Fetch'
 import Level7 from './challenges/Level7-Dependency'
 import Level8 from './challenges/Level8-Clock'
 import BossLevel2 from './challenges/BossLevel2';
+import Level9 from './challenges/Level9-Context';
 
 function App() {
   const [showClock, setShowClock] = useState(true);
@@ -34,6 +35,7 @@ function App() {
       {showClock && <Level8 />}
     </div>
       <BossLevel2 />
+      <Level9 />
     </div>
   )
 }
