@@ -13,6 +13,7 @@ import BossLevel2 from './challenges/BossLevel2';
 import Level9 from './challenges/Level9-Context';
 import Level10 from './challenges/Level10-Router';
 import BossLevel3 from './challenges/BossLevel3';
+import Level11 from './challenges/Level11-Ref';
 
 function App() {
   const [showClock, setShowClock] = useState(true);
@@ -40,6 +41,7 @@ function App() {
       <Level9 />
       <Level10 />
       <BossLevel3 />
+      <Level11 />
     </div>
   )
 }
