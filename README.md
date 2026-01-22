@@ -1,16 +1,85 @@
-# React + Vite
+# ⚛️ React Mastery Path
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository documents my journey from a React Novice to a Master. It follows a structured, level-by-level progression, with each challenge introducing a core concept of modern React development.
 
-Currently, two official plugins are available:
+**Built with:** React, Vite, CSS Modules, React Router, Context API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 How to Run This Project
 
-## React Compiler
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/react-mastery-path.git](https://github.com/YOUR_USERNAME/react-mastery-path.git)
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🗺️ The Journey
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The project is divided into four phases of difficulty.
+
+### 🟢 Phase 1: The Novice (Foundations)
+*Focus: Components, Props, State, and Lists.*
+
+| Level | Challenge | Concept Learned |
+| :--- | :--- | :--- |
+| **01** | The Hero Card | Components & Props Reusability |
+| **02** | The Spoiler Button | `useState` (Booleans) & Conditional Rendering |
+| **03** | Scoreboard | State Management (Numbers) |
+| **04** | The Mirror | Controlled Inputs & Forms |
+| **05** | The Playlist | Rendering Lists with `.map()` and Keys |
+| **BOSS** | **RPG Inventory** | **CRUD Operations (Create, Read, Delete) in Arrays** |
+
+### 🟡 Phase 2: The Apprentice (Side Effects)
+*Focus: `useEffect`, APIs, and Lifecycle.*
+
+| Level | Challenge | Concept Learned |
+| :--- | :--- | :--- |
+| **06** | The Watchman | Data Fetching (`fetch`) & Loading States |
+| **07** | Dependency Array | Synchronizing State with Server Data |
+| **08** | The Clock | Component Lifecycle & Cleanup (Unmounting) |
+| **BOSS** | **Crypto Ticker** | **Real-time Data Fetching & Dynamic URLs** |
+
+### 🟠 Phase 3: The Journeyman (Architecture)
+*Focus: Global State and Routing.*
+
+| Level | Challenge | Concept Learned |
+| :--- | :--- | :--- |
+| **09** | Theme Switcher | `useContext` & Global State |
+| **10** | The Navigator | Client-Side Routing (SPA) with `react-router-dom` |
+| **BOSS** | **Mini E-Commerce** | **Combining Context + Router for Persistent Data** |
+
+### 🔴 Phase 4: The Master (Performance & Logic)
+*Focus: Optimization and Advanced Hooks.*
+
+| Level | Challenge | Concept Learned |
+| :--- | :--- | :--- |
+| **11** | Laser Pointer | `useRef` for DOM Manipulation |
+| **12** | Custom Hooks | Abstracting Logic (`useFetch`) |
+| **13** | The Optimizer | Performance Tuning with `useMemo` |
+| **BOSS** | **Kanban Board** | **Complex State, LocalStorage Persistence & Architecture** |
+
+---
+
+## ⚔️ The Arena (Practice Projects)
+After completing the mastery path, I am now building standalone components from scratch to test my engineering skills without guidance.
+
+* **Arena 1:** Product Review System (Forms & List Logic)
+* *(More coming soon...)*
+
+---
+
+## 🧠 Key Takeaways
+Through this project, I have learned to:
+* Think in **Components**: Breaking complex UIs into small, reusable pieces.
+* Manage **State**: Understanding when to use Local State vs. Global Context.
+* Handle **Side Effects**: Fetching data and cleaning up timers properly.
+* Optimize **Performance**: Using Memoization to prevent unnecessary re-renders.
+* Architect **Scalable Apps**: Organizing code with Custom Hooks and clean folder structures.
