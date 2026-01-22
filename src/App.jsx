@@ -1,55 +1,39 @@
 // src/App.jsx
-import { useState } from 'react';
-import Level1 from './challenges/Level1-Hero'
-import Level2 from './challenges/Level2-Spoiler'
-import Level3 from './challenges/Level3-Score'
-import Level4 from './challenges/Level4-Mirror'
-import Level5 from './challenges/Level5-Playlist'
-import BossLevel1 from './challenges/BossLevel1'
-import Level6 from './challenges/Level6-Fetch'
-import Level7 from './challenges/Level7-Dependency'
-import Level8 from './challenges/Level8-Clock'
-import BossLevel2 from './challenges/BossLevel2';
-import Level9 from './challenges/Level9-Context';
-import Level10 from './challenges/Level10-Router';
-import BossLevel3 from './challenges/BossLevel3';
-import Level11 from './challenges/Level11-Ref';
-import Level12 from './challenges/Level12-CustomHook';
-import Level13 from './challenges/Level13-Memo';
-import BossLevel4 from './challenges/BossLevel4';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Mastery from './Mastery';
+import Arena from './Arena';
 
-function App() {
-  const [showClock, setShowClock] = useState(true);
-
+export default function App() {
   return (
-    <div>
-      <Level1 />
-      <Level2 />
-      <Level3 />
-      <Level4 />
-      <Level5 />
-      <BossLevel1 />
-      <Level6 />
-      <Level7 />
-      <div style={{ textAlign: 'center', padding: '20px' }}>
-      <button 
-        style={{marginTop: '30px', padding: '10px' }}
-        onClick={() => setShowClock(!showClock)}
-      >
-        {showClock ? "Hide Clock (Unmount)" : "Show Clock (Mount)"}
-      </button>
-      {showClock && <Level8 />}
-    </div>
-      <BossLevel2 />
-      <Level9 />
-      <Level10 />
-      <BossLevel3 />
-      <Level11 />
-      <Level12 />
-      <Level13 />
-      <BossLevel4 />
-    </div>
-  )
-}
+    <BrowserRouter>
+      <div style={{ fontFamily: 'sans-serif' }}>
+        
+        {/* GLOBAL NAVIGATION BAR */}
+        <nav style={{ 
+          display: 'flex', 
+          gap: '20px', 
+          padding: '20px', 
+          background: '#222', 
+          color: 'white',
+          marginBottom: '20px'
+        }}>
+          <Link to="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>
+            🏠 Mastery Path
+          </Link>
+          <Link to="/arena" style={{ color: '#00ff00', textDecoration: 'none', fontWeight: 'bold' }}>
+            ⚔️ The Arena
+          </Link>
+        </nav>
 
-export default App
+        {/* PAGE CONTENT SWAPS HERE */}
+        <div style={{ padding: '0 20px' }}>
+          <Routes>
+            <Route path="/" element={<Mastery />} />
+            <Route path="/arena" element={<Arena />} />
+          </Routes>
+        </div>
+
+      </div>
+    </BrowserRouter>
+  );
+}

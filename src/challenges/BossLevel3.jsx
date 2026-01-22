@@ -1,6 +1,6 @@
 // src/challenges/BossLevel3.jsx
 import { useState, useContext, createContext } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 
 const CartContext = createContext();
 
@@ -84,15 +84,12 @@ export default function BossLevel3() {
       <h1>Boss Level 3: The Mini-Shop</h1>
       
       <CartProvider>
-        <BrowserRouter>
-          <Navbar />
-          
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<CartPage />} />
-          </Routes>
-          
-        </BrowserRouter>
+        <Navbar />
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Routes>
       </CartProvider>
     </div>
   );
