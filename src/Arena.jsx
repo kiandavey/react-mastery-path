@@ -1,4 +1,5 @@
 // src/Arena.jsx
+import Arena1 from "./challenges/Arena1-Reviews";
 
 export default function Arena() {
   return (
@@ -7,7 +8,8 @@ export default function Arena() {
       <p>Practice challenges to test my skills.</p>
       <hr />
       
-      {/* Render Arena challenges here */}
+      <Arena1 />
+
     </div>
   );
 }
