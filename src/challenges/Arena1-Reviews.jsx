@@ -20,6 +20,11 @@ export default function Arena1() {
         setRating("5");
     }
 
+    function deleteItem(idToDelete) {
+        const updatedList = reviews.filter(review => review.id !== idToDelete);
+        setReviews(updatedList);
+    }
+
     return (
         <div>
             <h2>Arena Challenge 1: Reviews</h2>
@@ -60,7 +65,7 @@ export default function Arena1() {
                 Submit
             </button>
 
-            <button>
+            <button onClick={() => deleteItem(reviews.id)}>
                 X
             </button>
 
