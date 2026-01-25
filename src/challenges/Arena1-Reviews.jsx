@@ -1,18 +1,20 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export default function Arena1() {
-    const [reviews, setReviews] = useState([
-        { id: 1, title: "Great product!", rating: 5 },
-        { id: 2, title: "Not bad, could be better.", rating: 3 }
-    ]);
+    const [reviews, setReviews] = useState([]);
     const [title, setTitle] = useState("");
     const [rating, setRating] = useState("5");
 
+    const nextId = useRef(1);
+
     function addItem() {
         const newReviews = {
+            id: nextId.current,
             title: title,
             rating: rating
         };
+
+        nextId.current += 1;
 
         setReviews(oldReviews => [...oldReviews, newReviews]);
 
@@ -53,20 +55,22 @@ export default function Arena1() {
                 </select>
             </label>
 
+            {/* Reviews List and Delete Button*/}
             <ul>
                 {reviews.map((review) => (
                     <li key={review.id}>
-                        <strong>{review.text}</strong> - {review.rating} Stars
+                        <strong>{review.title}</strong> - {review.rating} Stars
+
+                        <button onClick={() => deleteItem(review.id)} style={{backgroundColor: 'red'}}>
+                            X
+                        </button>
                     </li>
                 ))}
             </ul>
 
+            {/* Submit Button */}
             <button onClick={() => addItem()}>
                 Submit
-            </button>
-
-            <button onClick={() => deleteItem(reviews.id)}>
-                X
             </button>
 
         </div>
