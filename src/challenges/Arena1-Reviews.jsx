@@ -7,11 +7,21 @@ export default function Arena1() {
 
     const nextId = useRef(1);
 
+    const averageRating =
+    reviews.length === 0
+        ? 0
+        : (
+            reviews.reduce((sum, r) => sum + r.rating, 0) /
+            reviews.length
+        ).toFixed(1);
+
+    if (!title) return;
+    {/* Add item function */}
     function addItem() {
         const newReviews = {
             id: nextId.current,
             title: title,
-            rating: rating
+            rating: Number(rating)
         };
 
         nextId.current += 1;
@@ -22,6 +32,7 @@ export default function Arena1() {
         setRating("5");
     }
 
+    {/* Delete item function */}
     function deleteItem(idToDelete) {
         const updatedList = reviews.filter(review => review.id !== idToDelete);
         setReviews(updatedList);
@@ -67,6 +78,9 @@ export default function Arena1() {
                     </li>
                 ))}
             </ul>
+
+            {/* Average Rating */}
+            <h4>Average Rating: {averageRating}</h4>
 
             {/* Submit Button */}
             <button onClick={() => addItem()}>
