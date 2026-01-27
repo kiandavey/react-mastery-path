@@ -20,7 +20,7 @@ export default function App() {
           <Link to="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>
             🏠 Mastery Path
           </Link>
-          <Link to="/arena" style={{ color: '#00ff00', textDecoration: 'none', fontWeight: 'bold' }}>
+          <Link to="/arena" style={{ color: 'orange', textDecoration: 'none', fontWeight: 'bold' }}>
             ⚔️ The Arena
           </Link>
         </nav>

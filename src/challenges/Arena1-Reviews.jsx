@@ -15,9 +15,9 @@ export default function Arena1() {
             reviews.length
         ).toFixed(1);
 
-    if (!title) return;
     {/* Add item function */}
     function addItem() {
+        if (!title) return;
         const newReviews = {
             id: nextId.current,
             title: title,
@@ -40,7 +40,7 @@ export default function Arena1() {
 
     return (
         <div>
-            <h2>Arena Challenge 1: Reviews</h2>
+            <h2 style={{color: 'orange'}}>Arena Challenge 1: Reviews</h2>
 
             <label>
                 Title:
