@@ -2,7 +2,12 @@ import { useEffect, useState } from 'react';
 
 
 export default function Arena2() {
-    const [user, setUser] = useState(null);
+    const [searchedName, setSearchedName] = useState("");
+    const [characters, setCharacters] = useState([]);
+
+    const visibleCharacters = characters.filter(char => 
+        char.name.toLowerCase().includes(searchedName.toLowerCase()
+    ));
 
     useEffect(() => {
         
@@ -14,7 +19,7 @@ export default function Arena2() {
             return response.json();
         })
         .then(data => {
-            setUser(data);
+            setCharacters(data.results);
         })
         .catch(error => {
             console.error("Fetch error: ", error);
@@ -26,11 +31,27 @@ export default function Arena2() {
         <div>
             <h2 style={{color: 'orange'}}>Arena Challenge 2: Search</h2>
 
-            {!user ? (
+            <label>
+                Search: 
+                <input
+                    type="text"
+                    placeholder="Enter name..."
+                    value={searchedName}
+                    onChange={(e) => setSearchedName(e.target.value)}
+                />
+            </label>
+
+            {characters.length === 0 ? (
                 <p>Loading...</p>
             ) : (
                 <div>
-
+                   {visibleCharacters.map(char => (
+                    <div key={char.id} style={{ fontWeight: 'bold' }}>
+                        <img src={char.image} alt={char.name} width="150" />
+                        <p>Name: {char.name}</p>
+                        <p>Status: {char.status}</p>
+                    </div>
+                    ))}
                 </div>
             )}
         </div>
