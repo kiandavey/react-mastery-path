@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-
 export default function Arena2() {
     const [searchedName, setSearchedName] = useState("");
     const [characters, setCharacters] = useState([]);

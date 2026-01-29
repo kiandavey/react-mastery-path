@@ -1,6 +1,7 @@
 // src/Arena.jsx
 import Arena1 from "./challenges/Arena1-Reviews";
 import Arena2 from "./challenges/Arena2-Search";
+import Arena3 from "./challenges/Arena3-Stopwatch";
 
 export default function Arena() {
   return (
@@ -11,6 +12,7 @@ export default function Arena() {
       
       <Arena1 />
       <Arena2 />
+      <Arena3 />
 
     </div>
   );
