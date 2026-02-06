@@ -18,6 +18,8 @@ export default function Arena5() {
     }, [page]);
 
     return (
-        <div></div>
+        <div>
+            
+        </div>
     )
 }
