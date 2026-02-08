@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 export default function Arena5() {
 
     const [page, setPage] = useState(1);
-
+    
     const [posts, setPosts] = useState([]);
     const [isLoading, setIsLoading] = useState()
 
