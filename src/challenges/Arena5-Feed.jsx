@@ -8,7 +8,6 @@ export default function Arena5() {
 
     useEffect(() => {
         setPage(null);
-
         fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=5`)
             .then(response => response.json())
             .then(data => {
